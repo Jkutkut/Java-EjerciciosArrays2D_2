@@ -1,4 +1,4 @@
-package dam.ej5;
+package dam.ej05;
 
 import java.util.Random;
 import java.util.Scanner;

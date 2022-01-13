@@ -1,4 +1,4 @@
-package dam.ej9;
+package dam.ej09;
 
 import java.util.Random;
 

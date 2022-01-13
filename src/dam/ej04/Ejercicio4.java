@@ -1,4 +1,4 @@
-package dam.ej4;
+package dam.ej04;
 
 import java.util.Random;
 import java.util.Scanner;

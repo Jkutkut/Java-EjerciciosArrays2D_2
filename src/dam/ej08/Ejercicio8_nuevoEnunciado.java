@@ -1,4 +1,4 @@
-package dam.ej8;
+package dam.ej08;
 
 import java.util.Random;
 

@@ -1,17 +1,16 @@
-package dam.ej6;
+package dam.ej07;
 
 import java.util.Random;
 
-public class Ejercicio6 {
+public class Ejercicio7 {
 
 	public static final int SIZE = 4;
 	
 	public static void main(String[] args) {
 		int[][] m1 = new int[SIZE][SIZE];
-		int[][] m2 = new int[SIZE][SIZE];
+		int[][] m2 = matrizUnidad(SIZE);
 		
 		randomFill(m1, SIZE * SIZE);
-		randomFill(m2, SIZE * SIZE);
 
 		System.out.println("1º Matriz:");
 		System.out.println(prettyPrint(m1));
@@ -25,6 +24,17 @@ public class Ejercicio6 {
 		System.out.println(prettyPrint(resultado));
 	}
 	
+	private static int[][] matrizUnidad(int n) {
+		int[][] arr = new int[n][n];
+		for (int i = 0, j; i < arr.length; i++) {
+			for (j = 0; j < arr[i].length; j++) {
+				arr[i][j] = 0;
+			}
+			arr[i][i] = 1;
+		}
+		return arr;
+	}
+
 	private static int[][] productoMatrices(int[][] m1, int[][] m2) {
 		// Supongo que ambas matrices son matrices n1xm1 y n2xm2 (que todas las filas y son del mismo tamaño)
 		if (m1[0].length != m2.length) {
