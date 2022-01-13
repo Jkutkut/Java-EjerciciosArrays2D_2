@@ -13,6 +13,9 @@ public class Ejercicio6_nuevoEnunciado {
 
 		System.out.println("Matriz:");
 		System.out.println(printSumas(m1));
+		
+		// Manera "normal":
+		printSumasV0(m1);
 	}
 
 	private static void randomFill(int[][] matriz, int maxVal) {
@@ -60,5 +63,28 @@ public class Ejercicio6_nuevoEnunciado {
 		}
 		str += "\n";
 		return str;
+	}
+	
+	/**
+	 * Manera menos bonita de imprimir las sumas
+	 */
+	public static void printSumasV0(int arr[][]) {
+		int i, j, sumaFila;
+		int[] sumaColumnas = new int[arr[0].length]; // Se puede usar SIZE en este caso, pero así funciona para cualquiera
+		
+		System.out.println("Suma de filas:");
+		for (i = 0; i < arr.length; i++) {
+			sumaFila = 0;
+			for (j = 0; j < arr[i].length; j++) {
+				sumaFila += arr[i][j];
+				sumaColumnas[j] += arr[i][j];
+			}
+			System.out.println("  - Fila " + i + ": " + sumaFila);
+		}
+		
+		System.out.println("\nSuma de Columnas:");
+		for (i = 0; i < sumaColumnas.length; i++) {
+			System.out.println("  - Columna " + i + ": " + sumaColumnas[i]);
+		}
 	}
 }
