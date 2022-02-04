@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Ejercicio10 {
 
-	public static final int SIZE = 4;
-	public static final int DIGITS = 2;
+	public static final int SIZE = 3;
+	public static final int DIGITS = 3;
 	
 	public static void main(String[] args) {
 		int[][] m1 = new int[SIZE][SIZE];
@@ -68,8 +68,8 @@ public class Ejercicio10 {
 		
 		for (int i = 0, j; i < matriz.length; i++) {
 			for (j = 0; j < matriz[i].length; j++) {
-//				matriz[i][j] = r.nextInt(maxVal);
-				matriz[i][j] = r.nextInt(2 * maxVal) -maxVal;
+				matriz[i][j] = r.nextInt(maxVal);
+//				matriz[i][j] = r.nextInt(2 * maxVal) -maxVal;
 			}
 		}
 	}
